@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="TestWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="oYo-Dg-PqU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="eZW-OL-jut">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="4ic-pz-WxM"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="y77-nU-HSN">
+                                <rect key="frame" x="57.666666666666657" y="316" width="260" height="180"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xi9-BZ-b6U">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="80"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeedsImage" translatesAutoresizingMaskIntoConstraints="NO" id="qGF-TO-REd">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="7ah-z2-mh0"/>
+                                                    <constraint firstAttribute="height" constant="80" id="kbM-YD-ayc"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LondonImage" translatesAutoresizingMaskIntoConstraints="NO" id="e1v-Bq-ymu">
+                                                <rect key="frame" x="140" y="0.0" width="120" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="T05-21-aYV"/>
+                                                    <constraint firstAttribute="height" constant="80" id="dEA-Mj-RIO"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c41-Qa-lwW">
+                                        <rect key="frame" x="0.0" y="100" width="260" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFW-UV-3lt">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="H9m-nO-Wfl"/>
+                                                    <constraint firstAttribute="width" constant="120" id="JGw-ql-ULy"/>
+                                                </constraints>
+                                                <state key="normal" image="Leeds"/>
+                                                <connections>
+                                                    <action selector="leedsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yvS-xD-PZo"/>
+                                                    <segue destination="bFn-CO-ybG" kind="presentation" modalTransitionStyle="partialCurl" id="zPc-om-ZM8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqN-K0-5Ps">
+                                                <rect key="frame" x="140" y="0.0" width="120" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="bdc-7X-Fy1"/>
+                                                    <constraint firstAttribute="height" constant="80" id="opY-7G-1ag"/>
+                                                </constraints>
+                                                <state key="normal" image="London"/>
+                                                <connections>
+                                                    <action selector="londonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Djz-wU-3vG"/>
+                                                    <segue destination="bFn-CO-ybG" kind="presentation" modalTransitionStyle="partialCurl" id="JHW-hL-hte"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oYo-Dg-PqU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="8uI-4g-0q6"/>
+                            <constraint firstItem="eZW-OL-jut" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8xr-YC-aG0"/>
+                            <constraint firstItem="oYo-Dg-PqU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9NX-Sm-qZQ"/>
+                            <constraint firstItem="y77-nU-HSN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9wk-WM-511"/>
+                            <constraint firstItem="y77-nU-HSN" firstAttribute="centerX" secondItem="eZW-OL-jut" secondAttribute="centerX" id="eIi-Zr-1NG"/>
+                            <constraint firstItem="oYo-Dg-PqU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gnk-xZ-JBU"/>
+                            <constraint firstItem="eZW-OL-jut" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kGg-0u-wg3"/>
+                            <constraint firstItem="eZW-OL-jut" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o3j-wa-Lyp"/>
+                            <constraint firstItem="oYo-Dg-PqU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rI2-3i-w23"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="leedsButton" destination="jFW-UV-3lt" id="ESn-CO-xhG"/>
+                        <outlet property="londonButton" destination="NqN-K0-5Ps" id="pIz-oq-Zbo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="117.48768472906404"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mDm-qX-QjV">
+            <objects>
+                <viewController id="bFn-CO-ybG" customClass="ViewController" customModule="TestWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uWK-xr-2Va">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="QDa-mI-PNS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leeds" translatesAutoresizingMaskIntoConstraints="NO" id="zXH-oi-7yj">
+                                <rect key="frame" x="102" y="54" width="171" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="jBX-NL-J07"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMe-kT-U0O">
+                                <rect key="frame" x="136" y="698" width="103" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pLF-Ep-zSG"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="flipHorizontal" id="Yay-fT-5Za"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSd-vI-th6">
+                                <rect key="frame" x="30" y="134" width="315" height="544"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sOw-eK-fFy">
+                                        <rect key="frame" x="12" y="20" width="295" height="504"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rs7-Da-KQX">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="100.66666666666667"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhy-nh-GL3">
+                                                <rect key="frame" x="0.0" y="100.66666666666666" width="295" height="101"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kc-03-lxR">
+                                                <rect key="frame" x="0.0" y="201.66666666666669" width="295" height="100.66666666666669"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pWm-yp-pVO">
+                                                <rect key="frame" x="0.0" y="302.33333333333331" width="295" height="101"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHv-CD-1u7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="145" height="101"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hip-EB-XoX">
+                                                        <rect key="frame" x="150" y="0.0" width="145" height="101"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSG-zS-Igh">
+                                                <rect key="frame" x="0.0" y="403.33333333333337" width="295" height="100.66666666666669"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.74529109589041098" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="sOw-eK-fFy" secondAttribute="bottom" constant="20" id="7HD-gj-DQ5"/>
+                                    <constraint firstItem="sOw-eK-fFy" firstAttribute="top" secondItem="nSd-vI-th6" secondAttribute="top" constant="20" id="Qr5-I5-Svv"/>
+                                    <constraint firstAttribute="trailing" secondItem="sOw-eK-fFy" secondAttribute="trailing" constant="8" id="dGd-vR-8vF"/>
+                                    <constraint firstItem="sOw-eK-fFy" firstAttribute="leading" secondItem="nSd-vI-th6" secondAttribute="leading" constant="12" id="xsN-9i-LWb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XMB-l0-7IJ" firstAttribute="trailing" secondItem="nSd-vI-th6" secondAttribute="trailing" constant="30" id="1Nb-38-VyQ"/>
+                            <constraint firstItem="nSd-vI-th6" firstAttribute="top" secondItem="XMB-l0-7IJ" secondAttribute="top" constant="90" id="3qt-D2-ZSJ"/>
+                            <constraint firstItem="vMe-kT-U0O" firstAttribute="top" secondItem="nSd-vI-th6" secondAttribute="bottom" constant="20" id="4e1-sD-hjN"/>
+                            <constraint firstItem="XMB-l0-7IJ" firstAttribute="trailing" secondItem="zXH-oi-7yj" secondAttribute="trailing" constant="102" id="BwN-Ih-sKS"/>
+                            <constraint firstItem="QDa-mI-PNS" firstAttribute="leading" secondItem="uWK-xr-2Va" secondAttribute="leading" id="NVj-zg-2bf"/>
+                            <constraint firstAttribute="bottom" secondItem="QDa-mI-PNS" secondAttribute="bottom" id="Qul-Gn-cDC"/>
+                            <constraint firstItem="QDa-mI-PNS" firstAttribute="centerX" secondItem="zXH-oi-7yj" secondAttribute="centerX" id="SEG-rf-JeR"/>
+                            <constraint firstItem="zXH-oi-7yj" firstAttribute="leading" secondItem="XMB-l0-7IJ" secondAttribute="leading" constant="102" id="U6N-O1-FVH"/>
+                            <constraint firstItem="XMB-l0-7IJ" firstAttribute="bottom" secondItem="vMe-kT-U0O" secondAttribute="bottom" constant="20" id="Zcu-od-kue"/>
+                            <constraint firstItem="vMe-kT-U0O" firstAttribute="leading" secondItem="XMB-l0-7IJ" secondAttribute="leading" constant="136" id="dDk-TG-Ppm"/>
+                            <constraint firstItem="zXH-oi-7yj" firstAttribute="top" secondItem="XMB-l0-7IJ" secondAttribute="top" constant="10" id="nz7-zy-Uiz"/>
+                            <constraint firstItem="XMB-l0-7IJ" firstAttribute="trailing" secondItem="vMe-kT-U0O" secondAttribute="trailing" constant="136" id="sCV-wX-Nr2"/>
+                            <constraint firstItem="QDa-mI-PNS" firstAttribute="top" secondItem="uWK-xr-2Va" secondAttribute="top" id="v7M-p4-d2c"/>
+                            <constraint firstItem="nSd-vI-th6" firstAttribute="leading" secondItem="XMB-l0-7IJ" secondAttribute="leading" constant="30" id="wM6-mw-eh7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XMB-l0-7IJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="bannerImage" destination="zXH-oi-7yj" id="zjs-ST-BQQ"/>
+                        <outlet property="descrip" destination="dhy-nh-GL3" id="DuC-vC-lSs"/>
+                        <outlet property="mainInfo" destination="rs7-Da-KQX" id="osI-Y0-aOr"/>
+                        <outlet property="maxTemp" destination="hip-EB-XoX" id="43N-8n-ZRR"/>
+                        <outlet property="minTemp" destination="mHv-CD-1u7" id="Wzv-UE-Fy0"/>
+                        <outlet property="temp" destination="9kc-03-lxR" id="iFM-37-KjG"/>
+                        <outlet property="wind" destination="aSG-zS-Igh" id="hRH-O7-33i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WL8-3Q-JWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090.4000000000001" y="116.00985221674877"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1920" height="1305"/>
+        <image name="Leeds" width="275" height="209"/>
+        <image name="LeedsImage" width="640" height="480"/>
+        <image name="Logo" width="642" height="209"/>
+        <image name="London" width="334" height="209"/>
+        <image name="LondonImage" width="640" height="427"/>
+        <image name="back" width="247" height="209"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JHW-hL-hte"/>
+    </inferredMetricsTieBreakers>
+</document>
